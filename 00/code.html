@@ -1,0 +1,578 @@
+<!DOCTYPE html><html lang="zh-Hant" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>AURA TECH - 無邊界極簡旗艦</title>
+<!-- Eric Meyer's Reset CSS v2.0 CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+<!-- Google Fonts: Inter & Noto Sans TC -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Quicksand:wght@500;600;700&amp;family=Zen+Maru+Gothic:wght@400;500;700&amp;family=Noto+Sans+TC:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Font Awesome 6.5.1 CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "apple-bg": "#FFFFFF",
+            "apple-subtle": "#F5F5F7",
+            "apple-text": "#1D1D1F",
+            "apple-secondary": "#86868B",
+            "apple-link": "#0066CC",
+            "apple-link-hover": "#0077ED",
+            "surface": "#FFFFFF",
+            "surface-dim": "#F5F5F7",
+            "on-surface": "#1D1D1F",
+            "tertiary": "#86868B",
+            "primary": "#0071E3",
+            "primary-container": "#0071E3",
+            "outline-variant": "#D2D2D7"
+          },
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans TC', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            body: ['Inter', 'Noto Sans TC', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    /* Pure Float & Micro-Clearfix Architecture */
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #FFFFFF;
+      color: #1D1D1F;
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      padding: 0;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    /* Responsive Float Rules without flexbox or grid */
+    @media (max-width: 768px) {
+      .col-float-stack {
+        float: none !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+      }
+      .mobile-center {
+        text-align: center !important;
+      }
+      .mobile-padding {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-apple-bg text-apple-text antialiased selection:bg-[#0071E3]/20 selection:text-[#0071E3]">
+<!-- HEADER NAVIGATION -->
+<header class="fixed top-0 left-0 right-0 z-50 transition-all backdrop-blur-[20px] bg-white/80 border-b border-black/[0.06]">
+<div class="max-w-[1024px] mx-auto px-6 h-12 clearfix">
+<div class="float-left h-12 leading-[48px]">
+<a class="text-[14px] font-semibold tracking-tight text-apple-text hover:text-primary transition-colors inline-block" href="#">
+<i class="fa-solid fa-cube text-[15px] mr-1.5 opacity-90"></i>AURA TECH
+        </a>
+</div>
+<!-- Right Header Actions (Float Right) -->
+<div class="float-right h-12 clearfix leading-[48px]">
+<div class="float-left">
+<button aria-label="Search" class="text-apple-secondary hover:text-apple-text transition-colors px-2.5 h-12 inline-block border-0 bg-transparent cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[18px] align-middle">search</span>
+</button>
+</div>
+<div class="float-left">
+<button aria-label="Shopping Bag" class="text-apple-secondary hover:text-apple-text transition-colors px-2.5 h-12 inline-block border-0 bg-transparent cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[18px] align-middle">shopping_bag</span>
+</button>
+</div>
+</div>
+<!-- Nav Links Center/Left (Float Left) -->
+<nav class="hidden md:block float-left ml-10">
+<ul class="list-none m-0 p-0 clearfix leading-[48px]">
+<li class="float-left mr-7"><a class="text-[12px] tracking-normal text-apple-secondary hover:text-apple-text transition-colors" href="#flagship-phone">旗艦手機 Phone</a></li>
+<li class="float-left mr-7"><a class="text-[12px] tracking-normal text-apple-secondary hover:text-apple-text transition-colors" href="#aura-book">超極致筆電 Mac</a></li>
+<li class="float-left mr-7"><a class="text-[12px] tracking-normal text-apple-secondary hover:text-apple-text transition-colors" href="#aura-watch">智慧穿戴 Watch</a></li>
+<li class="float-left mr-7"><a class="text-[12px] tracking-normal text-apple-secondary hover:text-apple-text transition-colors" href="#pro-audio">極致聲學 Audio</a></li>
+<li class="float-left mr-7"><a class="text-[12px] tracking-normal text-apple-secondary hover:text-apple-text transition-colors" href="#aura-power">精選配件 Acc</a></li>
+<li class="float-left mr-7"><a class="text-[12px] tracking-normal text-apple-secondary hover:text-apple-text transition-colors" href="#specs">技術規格 Specs</a></li>
+<li class="float-left"><a class="text-[12px] tracking-normal text-apple-secondary hover:text-apple-text transition-colors" href="#trade-in">線上支援 Support</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main class="w-full pt-12">
+<!-- SUB-NAVIGATION RIBBON (PURE BORDERLESS FLOAT) -->
+<section class="w-full bg-apple-bg/90 backdrop-blur-md sticky top-12 z-40 border-b border-black/[0.04]">
+<div class="max-w-[960px] mx-auto px-4 py-3 clearfix">
+<div class="float-left w-1/5 text-center col-float-stack">
+<a class="inline-block group text-apple-secondary hover:text-apple-text transition-colors py-1" href="#flagship-phone">
+<span class="block text-[20px] mb-1 group-hover:-translate-y-0.5 transition-transform"><i class="fa-solid fa-mobile-screen"></i></span>
+<span class="block text-[11px] font-medium tracking-tight">Phone 手機</span>
+</a>
+</div>
+<div class="float-left w-1/5 text-center col-float-stack">
+<a class="inline-block group text-apple-secondary hover:text-apple-text transition-colors py-1" href="#aura-book">
+<span class="block text-[20px] mb-1 group-hover:-translate-y-0.5 transition-transform"><i class="fa-solid fa-laptop"></i></span>
+<span class="block text-[11px] font-medium tracking-tight">Mac 筆電</span>
+</a>
+</div>
+<div class="float-left w-1/5 text-center col-float-stack">
+<a class="inline-block group text-apple-secondary hover:text-apple-text transition-colors py-1" href="#aura-watch">
+<span class="block text-[20px] mb-1 group-hover:-translate-y-0.5 transition-transform"><i class="fa-solid fa-clock"></i></span>
+<span class="block text-[11px] font-medium tracking-tight">Watch 腕錶</span>
+</a>
+</div>
+<div class="float-left w-1/5 text-center col-float-stack">
+<a class="inline-block group text-apple-secondary hover:text-apple-text transition-colors py-1" href="#pro-audio">
+<span class="block text-[20px] mb-1 group-hover:-translate-y-0.5 transition-transform"><i class="fa-solid fa-headphones"></i></span>
+<span class="block text-[11px] font-medium tracking-tight">Audio 聲學</span>
+</a>
+</div>
+<div class="float-left w-1/5 text-center col-float-stack">
+<a class="inline-block group text-apple-secondary hover:text-apple-text transition-colors py-1" href="#aura-power">
+<span class="block text-[20px] mb-1 group-hover:-translate-y-0.5 transition-transform"><i class="fa-solid fa-bolt-lightning"></i></span>
+<span class="block text-[11px] font-medium tracking-tight">配件 Acc</span>
+</a>
+</div>
+</div>
+</section>
+<!-- NOTIFICATION TEXT STRIP (NO BOXES, BORDERLESS) -->
+<aside class="w-full bg-apple-subtle py-3 text-center text-apple-secondary text-[12px] leading-relaxed">
+<div class="max-w-[1024px] mx-auto px-6">
+<span class="">換購新機享專屬折抵優惠，全館免額外運費支援分期零利率。</span>
+<a class="text-apple-link hover:underline ml-1.5 inline-block font-normal" href="#trade-in">
+          立即了解換購價值 <span class="text-[11px]">›</span>
+</a>
+</div>
+</aside>
+<!-- 1. HERO SECTION: TITANIUM PRO (BORDERLESS & SUSPENDED) -->
+<section class="w-full pt-20 pb-28 bg-apple-bg" id="flagship-phone">
+<div class="max-w-[1180px] mx-auto px-6 text-center clearfix">
+<!-- Pure Eyebrow without heavy box -->
+<div class="w-full text-center mb-3">
+<span class="text-[13px] tracking-wide font-semibold text-[#BF4800] uppercase">
+            Flagship Keynote 2025
+          </span>
+</div>
+<!-- Headline & Subtitle -->
+<h1 class="text-[44px] sm:text-[68px] lg:text-[76px] font-bold text-apple-text tracking-tight leading-[1.08] max-w-4xl mx-auto mb-4">
+          Titanium Pro.
+        </h1>
+<p class="text-[22px] sm:text-[28px] font-normal text-apple-secondary max-w-2xl mx-auto mb-6 leading-tight">
+          超越想像的強大。
+        </p>
+<p class="text-[15px] sm:text-[17px] text-apple-secondary max-w-xl mx-auto mb-8 leading-relaxed font-light">
+          鈦金屬邊框，搭載神經光子架構晶片。全天候隨顯 OLED 視網膜螢幕，重新界定極限。
+        </p>
+<!-- CTA Floating Action Links -->
+<div class="w-full clearfix mb-14 text-center">
+<div class="inline-block clearfix">
+<div class="float-left mr-6">
+<a class="inline-block bg-[#0071E3] text-white text-[14px] font-medium px-6 py-2.5 rounded-full hover:bg-[#0077ED] transition-all" href="#preorder">
+                立即預購
+              </a>
+</div>
+<div class="float-left leading-[38px]">
+<a class="inline-block text-apple-link text-[15px] hover:underline" href="#specs">
+                探索更多規格 <span class="text-[13px] ml-0.5">›</span>
+</a>
+</div>
+</div>
+</div>
+<!-- BORDERLESS SUSPENDED HERO VISUAL: 移除灰底框線盒子，完全通透懸浮於純淨畫布 -->
+<div class="w-full clearfix mb-20 text-center">
+<div class="w-full max-w-[1040px] mx-auto">
+<img alt="Titanium Pro Flagship Smartphone" class="w-full h-auto block max-h-[640px] mx-auto bg-transparent border-0" src="https://lh3.googleusercontent.com/aida/AEtjO1V5m5HgN475PFvzUxAlsO4uOXeh1FBGNDHL4ZMu9GxRh0e9dX0-mzkgFvnvezaV4zsatKd5-exVgyOootceQlWhlrvc11LmHqk5gitA90rnC2YbVxkgqboXXoW-eEyjkvzsnXInQLBgXlCV8zkayeZ5IjYR3xQtKuBRS5Eyw2o9NE5Q6jjQkiEQS5Qe6gdYZHhGKKNI1nUY72W6crAoGP1N1sL9sv6G32krEVhR8-lvmFQTXDPmgzdh-VM">
+</div>
+</div>
+<!-- THREE METRIC HIGHLIGHTS: 徹底移除白底卡片、圓角框線與陰影，純文字與圖標輕盈橫排 -->
+<div class="max-w-[1040px] mx-auto clearfix pt-6 border-t border-black/[0.05]">
+<div class="float-left w-[30%] mr-[5%] col-float-stack text-left mb-6">
+<div class="text-[#0071E3] text-[26px] mb-3">
+<i class="fa-solid fa-microchip"></i>
+</div>
+<h3 class="text-[19px] font-semibold text-apple-text mb-2">Aura Bionic 晶片</h3>
+<p class="text-[14px] text-apple-secondary leading-relaxed font-light">
+              3 奈米製程光子運算核心，圖形效能飛躍提升 45%，日常功耗降低 30%。
+            </p>
+</div>
+<div class="float-left w-[30%] mr-[5%] col-float-stack text-left mb-6">
+<div class="text-[#0071E3] text-[26px] mb-3">
+<i class="fa-solid fa-camera"></i>
+</div>
+<h3 class="text-[19px] font-semibold text-apple-text mb-2">4800 萬像素三鏡頭</h3>
+<p class="text-[14px] text-apple-secondary leading-relaxed font-light">
+              新一代四合一像素感光元件，極致夜拍與電影級 4K 120fps 慢動作錄影。
+            </p>
+</div>
+<div class="float-left w-[30%] col-float-stack text-left mb-6">
+<div class="text-[#0071E3] text-[26px] mb-3">
+<i class="fa-solid fa-battery-full"></i>
+</div>
+<h3 class="text-[19px] font-semibold text-apple-text mb-2">高達 30 小時續航</h3>
+<p class="text-[14px] text-apple-secondary leading-relaxed font-light">
+              智慧電源管理分配，支援 45W 有線磁吸快充與 AuraLink 隨行超感無線續航。
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. TWO-COLUMN SECTION: ACOUSTICS (SOFT GREY ALTERNATION, NO BOXES) -->
+<section class="w-full py-28 bg-apple-subtle" id="pro-audio">
+<div class="max-w-[1140px] mx-auto px-6 clearfix">
+<!-- Left Column: Audio Showcase Image (float left 50%, completely borderless) -->
+<div class="float-left w-[48%] mr-[4%] col-float-stack mb-10">
+<div class="w-full overflow-hidden">
+<img alt="Aura Pro Headphones" class="w-full h-[540px] object-cover block" src="https://lh3.googleusercontent.com/aida/AEtjO1XEh1w0aUnFyt8J668zTkiixdRzQY30Y3WkM3jze_d4MWywdzbKjd127CNAfP6kiwov72kCIb7xTiSLck_78Lqzv1exuk3SY5BAOVWFMDLLg1xol2Wgxs9SFHWO89MGH2udmz4fKmAaR5LuZTdzvT11x89_iuLXvbv2EpkqotSDQ7UHrJp9QW5_LHljC8iS4E9VtBdmNp_3h_uNtWVX494p8pBbldDdsMm6lOzXz_oPMDRVmuL8wOuaeQ">
+</div>
+</div>
+<!-- Right Column: Narrative & Pure Borderless Spec Stack (float left 48%) -->
+<div class="float-left w-[48%] col-float-stack pt-2">
+<span class="text-[12px] font-semibold tracking-widest text-[#0071E3] uppercase block mb-3">
+            Acoustic Engineering
+          </span>
+<h2 class="text-[36px] sm:text-[44px] font-bold text-apple-text tracking-tight leading-[1.12] mb-5">
+            極致聲學工程。<br>空間音訊，如臨現場。
+          </h2>
+<p class="text-[16px] text-apple-secondary font-light leading-relaxed mb-10">
+            我們重構了耳機內部每個聲學微結構。特製 40 毫米動態驅動單體，結合全數位低失真擴大晶片，呈現深沉渾厚低音與絲綢般高頻清透細節。
+          </p>
+<!-- Feature Spec List (Removed boxes, simple elegant borderless list) -->
+<div class="w-full clearfix mb-10 space-y-6">
+<div class="w-full clearfix pb-5 border-b border-black/[0.06]">
+<div class="float-left w-8 text-[#0071E3] text-[20px] pt-0.5">
+<i class="fa-solid fa-wave-square"></i>
+</div>
+<div class="float-left w-[calc(100%-32px)] pl-2">
+<h3 class="text-[16px] font-semibold text-apple-text mb-1">主動降噪與空間音訊動態追蹤</h3>
+<p class="text-[14px] text-apple-secondary leading-relaxed font-light">
+                  每秒 48,000 次運算補償環境噪聲，配備頭部姿態陀螺儀，享受劇院級聲場。
+                </p>
+</div>
+</div>
+<div class="w-full clearfix pb-5 border-b border-black/[0.06]">
+<div class="float-left w-8 text-[#0071E3] text-[20px] pt-0.5">
+<i class="fa-solid fa-sliders"></i>
+</div>
+<div class="float-left w-[calc(100%-32px)] pl-2">
+<h3 class="text-[16px] font-semibold text-apple-text mb-1">無損音訊與自適應 EQ 等化器</h3>
+<p class="text-[14px] text-apple-secondary leading-relaxed font-light">
+                  即時根據耳形與配戴密閉程度微調聲學頻段，忠實還原母帶級細微呼吸聲。
+                </p>
+</div>
+</div>
+<div class="w-full clearfix">
+<div class="float-left w-8 text-[#0071E3] text-[20px] pt-0.5">
+<i class="fa-solid fa-bolt"></i>
+</div>
+<div class="float-left w-[calc(100%-32px)] pl-2">
+<h3 class="text-[16px] font-semibold text-apple-text mb-1">40 小時無間斷播放</h3>
+<p class="text-[14px] text-apple-secondary leading-relaxed font-light">
+                  開啟主動降噪仍可持續沉浸聆聽，充電 5 分鐘即可獲取 4 小時播放動能。
+                </p>
+</div>
+</div>
+</div>
+<!-- Action Links -->
+<div class="w-full clearfix">
+<div class="float-left mr-5">
+<a class="inline-block bg-apple-text text-white text-[14px] font-medium px-6 py-2.5 rounded-full hover:bg-black transition-colors" href="#acoustic-details">
+                立即選購 Aura Max
+              </a>
+</div>
+<div class="float-left leading-[38px]">
+<a class="text-apple-link text-[14px] hover:underline" href="#acoustic-deepdive">
+                深入了解聲學架構 <span class="text-[13px] ml-0.5">›</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. THREE-COLUMN ECOSYSTEM SECTION (PURE BORDERLESS PRODUCTS) -->
+<section class="w-full py-28 bg-apple-bg">
+<div class="max-w-[1140px] mx-auto px-6 clearfix">
+<!-- Section Header -->
+<div class="w-full text-center mb-20">
+<span class="text-[12px] font-semibold tracking-widest text-[#0071E3] uppercase block mb-3">Unified Ecosystem</span>
+<h2 class="text-[38px] sm:text-[50px] font-bold text-apple-text tracking-tight mb-4 leading-tight">
+            專為極致體驗打造的生態系統。
+          </h2>
+<p class="text-[17px] text-apple-secondary max-w-xl mx-auto font-light leading-relaxed">
+            跨裝置無縫切換，AirDrop 零延遲傳輸，讓創作與生活流暢無界。
+          </p>
+</div>
+<!-- 3 Borderless Product Showcase (Cards without borders/boxes/shadows) -->
+<div class="w-full clearfix">
+<!-- Product 1: AuraBook Air 15" -->
+<div class="float-left w-[31%] mr-[3.5%] col-float-stack text-center mb-12" id="aura-book">
+<div class="w-full mb-6 overflow-hidden">
+<img alt="AuraBook Air 15-inch" class="w-full h-[260px] object-cover mx-auto transform hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1XsTIg-u1SOpM3Z8NGbgHf4eMleRy1EPBvNo1S3Z-ZP_El5Zb0kHhTL8tI4wI4qBgiuFz9C-qlBH8Mg6f9FDVhu04Jgj9ha58X_6FX7LqNwjiFHhO4ItaeMfazJFd2-NVNv0bzXVDnBgAQK1AXO1Pr_uoIN502DD2KUNnHXl4GR2gCE8hsg5RRAEr5tVKa2BoQdvBXZgSrROSj9MHSF3q5tQgrM1yVMdiW7Zc0d47QV7vWNuJwEaZfZnrc">
+</div>
+<span class="text-[11px] font-semibold text-[#BF4800] uppercase tracking-wider block mb-1">PRO LAPTOP</span>
+<h3 class="text-[24px] font-bold text-apple-text mb-2">AuraBook Air 15"</h3>
+<p class="text-[14px] text-apple-secondary font-light max-w-xs mx-auto mb-3 min-h-[42px] leading-relaxed">
+              極致輕薄，磅礡效能。全天候電池續航，隨時啟程你的下一個非凡企劃。
+            </p>
+<div class="text-[15px] font-medium text-apple-text mb-4">
+              NT$ 38,900 起
+            </div>
+<div class="inline-block text-center clearfix">
+<div class="float-left mr-3">
+<a class="inline-block bg-[#0071E3] text-white text-[12px] font-medium px-4 py-1.5 rounded-full hover:bg-[#0077ED] transition-colors" href="#buy-laptop">購買</a>
+</div>
+<div class="float-left leading-[28px]">
+<a class="text-apple-link text-[13px] hover:underline" href="#laptop-specs">進一步了解 ›</a>
+</div>
+</div>
+</div>
+<!-- Product 2: Aura Watch Ultra -->
+<div class="float-left w-[31%] mr-[3.5%] col-float-stack text-center mb-12" id="aura-watch">
+<div class="w-full mb-6 overflow-hidden">
+<img alt="Aura Watch Ultra" class="w-full h-[260px] object-cover mx-auto transform hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1U8Stfm48WZPMT0aP3-8HW_kNLVxP7jhBnwn_u6RXWriIa9a3yqPmWHjqK0usTf2rih94BPha0Qk1jcOoli_IohGC6dUwZlAkucxcyxIyw0kwhqjJxY0iGNIxOjRQv_8TMNeodwBzHPIKlfFLbEk2YI37jwSFVgRes-pejruNKnqPVHre5UWzp9na7c21mNfA1vJnAG5xTLP-rayqYWJQeEEXPPB3AbX2klcs9hA4ewezZq5bxzWpWDncQ">
+</div>
+<span class="text-[11px] font-semibold text-[#BF4800] uppercase tracking-wider block mb-1">SMART WEARABLE</span>
+<h3 class="text-[24px] font-bold text-apple-text mb-2">Aura Watch Ultra</h3>
+<p class="text-[14px] text-apple-secondary font-light max-w-xs mx-auto mb-3 min-h-[42px] leading-relaxed">
+              全天候心率監測、雙頻精準 GPS 與深海潛水感應，陪你涉足每場極限探險。
+            </p>
+<div class="text-[15px] font-medium text-apple-text mb-4">
+              NT$ 14,900 起
+            </div>
+<div class="inline-block text-center clearfix">
+<div class="float-left mr-3">
+<a class="inline-block bg-[#0071E3] text-white text-[12px] font-medium px-4 py-1.5 rounded-full hover:bg-[#0077ED] transition-colors" href="#buy-watch">購買</a>
+</div>
+<div class="float-left leading-[28px]">
+<a class="text-apple-link text-[13px] hover:underline" href="#watch-specs">進一步了解 ›</a>
+</div>
+</div>
+</div>
+<!-- Product 3: Magnetic Wireless Power -->
+<div class="float-left w-[31%] col-float-stack text-center mb-12" id="aura-power">
+<div class="w-full mb-6 overflow-hidden">
+<img alt="Magnetic Wireless Power Module" class="w-full h-[260px] object-cover mx-auto transform hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1WA8raRNS4sfrxEIJR6mROZeeLBdzhcbH6crvxRorZ03XA-BM-N1OHsnPywiqDgYqBQsTvA0PkM6GTeiWrlK4U_6nMiH4q3dfPvWnc9vc8hD7rswt69JMiN0TgkkK8x8rksK5Vo27xmjJMTkDT6ThfZV3fY8MTSn_c1HHwGUS4l1s9hbqZRWJWNh1TvvlY6Qd36tIuyPaSI4Nys8BMdABVrQdrxrxgmCCfpYGe4W2mHzvZXKXzwy5-m0CE">
+</div>
+<span class="text-[11px] font-semibold text-[#BF4800] uppercase tracking-wider block mb-1">MAGPOWER TECH</span>
+<h3 class="text-[24px] font-bold text-apple-text mb-2">磁吸無線充電模組</h3>
+<p class="text-[14px] text-apple-secondary font-light max-w-xs mx-auto mb-3 min-h-[42px] leading-relaxed">
+              秒速吸附，為你的日常配備提供無縫高效能量。支援全生態多裝置快充。
+            </p>
+<div class="text-[15px] font-medium text-apple-text mb-4">
+              NT$ 2,980 起
+            </div>
+<div class="inline-block text-center clearfix">
+<div class="float-left mr-3">
+<a class="inline-block bg-[#0071E3] text-white text-[12px] font-medium px-4 py-1.5 rounded-full hover:bg-[#0077ED] transition-colors" href="#buy-power">購買</a>
+</div>
+<div class="float-left leading-[28px]">
+<a class="text-apple-link text-[13px] hover:underline" href="#power-specs">進一步了解 ›</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. SPECIFICATION COMPARISON (BORDERLESS MINIMAL TABLEAU) -->
+<section class="w-full py-28 bg-apple-subtle" id="specs">
+<div class="max-w-[1040px] mx-auto px-6 clearfix">
+<div class="w-full text-center mb-16">
+<h2 class="text-[34px] sm:text-[42px] font-bold text-apple-text tracking-tight mb-3">旗艦型號規格速覽</h2>
+<p class="text-[16px] text-apple-secondary font-light">依據您的專業需求，挑選最適配的強大工具。</p>
+</div>
+<div class="w-full clearfix">
+<!-- Table Header -->
+<div class="w-full clearfix pb-4 border-b border-black/[0.1]">
+<div class="float-left w-1/4 text-apple-secondary text-[13px] font-semibold">規格項目</div>
+<div class="float-left w-1/4 text-apple-text text-[15px] font-semibold">Phone 旗艦系列</div>
+<div class="float-left w-1/4 text-apple-text text-[15px] font-semibold">MacBook 專業筆電</div>
+<div class="float-left w-1/4 text-apple-text text-[15px] font-semibold">Watch 智慧手錶</div>
+</div>
+<!-- Spec Row 1 -->
+<div class="w-full clearfix py-5 border-b border-black/[0.05]">
+<div class="float-left w-1/4 text-apple-secondary text-[14px]">核心架構</div>
+<div class="float-left w-1/4 text-apple-text text-[14px]">Aura Bionic 9 Pro (6P+4E)</div>
+<div class="float-left w-1/4 text-apple-text text-[14px]">M3 Ultra 級運算模組</div>
+<div class="float-left w-1/4 text-apple-text text-[14px]">S9 SiP 雙核心處理器</div>
+</div>
+<!-- Spec Row 2 -->
+<div class="w-full clearfix py-5 border-b border-black/[0.05]">
+<div class="float-left w-1/4 text-apple-secondary text-[14px]">顯示技術</div>
+<div class="float-left w-1/4 text-apple-text text-[14px]">6.7" 超視網膜 XDR OLED</div>
+<div class="float-left w-1/4 text-apple-text text-[14px]">15.3" Liquid Retina 500 nits</div>
+<div class="float-left w-1/4 text-apple-text text-[14px]">全天候 Retina 3000 nits</div>
+</div>
+<!-- Spec Row 3 -->
+<div class="w-full clearfix py-5 border-b border-black/[0.05]">
+<div class="float-left w-1/4 text-apple-secondary text-[14px]">精工材質</div>
+<div class="float-left w-1/4 text-apple-text text-[14px]">航空級鈦金屬邊框</div>
+<div class="float-left w-1/4 text-apple-text text-[14px]">100% 再生鋁金屬一體機身</div>
+<div class="float-left w-1/4 text-apple-text text-[14px]">航太級鍛造鈦金屬錶殼</div>
+</div>
+<!-- Spec Row 4 -->
+<div class="w-full clearfix py-5">
+<div class="float-left w-1/4 text-apple-secondary text-[14px]">連接與擴充</div>
+<div class="float-left w-1/4 text-apple-text text-[14px]">USB-C 3.2 (10Gbps) / 5G</div>
+<div class="float-left w-1/4 text-apple-text text-[14px]">MagSafe 3 / Thunderbolt 4</div>
+<div class="float-left w-1/4 text-apple-text text-[14px]">磁吸快速充電 / LTE 獨立通訊</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. TRADE-IN / UPGRADE SECTION (PURE BORDERLESS OPEN CANVAS) -->
+<section class="w-full py-28 bg-apple-bg" id="trade-in">
+<div class="max-w-[840px] mx-auto px-6 text-center clearfix">
+<div class="w-full text-center mb-3">
+<i class="fa-solid fa-arrows-rotate text-[32px] text-[#0071E3]"></i>
+</div>
+<h2 class="text-[36px] sm:text-[46px] font-bold text-apple-text tracking-tight mb-4 leading-tight">
+          換購新機，輕鬆折抵。<br>享受最高 NT$ 18,500 折抵優惠。
+        </h2>
+<p class="text-[17px] text-apple-secondary font-light max-w-xl mx-auto mb-8 leading-relaxed">
+          透過 AURA Trade In 換購方案，用你現有的智慧裝置獲享換購折抵，或將其交由我們為地球免費回收。
+        </p>
+<div class="inline-block clearfix">
+<div class="float-left mr-5">
+<a class="inline-block bg-apple-text text-white text-[14px] font-medium px-7 py-3 rounded-full hover:bg-black transition-colors" href="#evaluate">
+              評估裝置價值
+            </a>
+</div>
+<div class="float-left leading-[42px]">
+<a class="text-apple-link text-[15px] hover:underline" href="#retail-stores">
+              尋找直營門市 <span class="text-[13px] ml-0.5">›</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. SUBSCRIPTION FORM (PURE BORDERLESS, BLENDING INTO BACKGROUND) -->
+<section class="w-full py-24 bg-apple-subtle">
+<div class="max-w-[680px] mx-auto px-6 text-center clearfix">
+<div class="w-full text-center mb-3">
+<i class="fa-regular fa-envelope text-[28px] text-[#0071E3]"></i>
+</div>
+<h2 class="text-[28px] sm:text-[34px] font-bold text-apple-text tracking-tight mb-3">
+          訂閱 AURA 最新產品發表與特惠資訊。
+        </h2>
+<p class="text-[15px] text-apple-secondary font-light mb-8 leading-relaxed">
+          第一時間獲取特別發表會邀請、旗艦機款預購通知及專屬會員活動。
+        </p>
+<!-- Pure Float Form: Borderless integration -->
+<form action="#" class="w-full clearfix mb-4" method="POST" onsubmit="event.preventDefault(); alert('感謝您的訂閱！我們將為您保留第一手發表會 VIP 邀請。');">
+<div class="float-left w-[72%] col-float-stack mb-2 sm:mb-0">
+<label class="sr-only" for="newsletter-email">電子郵件信箱</label>
+<input class="w-full h-11 px-4 rounded-full bg-white text-apple-text placeholder:text-apple-secondary/70 text-[14px] border border-black/[0.1] focus:outline-none focus:border-[#0071E3]" id="newsletter-email" placeholder="請輸入您的電子郵件信箱" required="" type="email">
+</div>
+<div class="float-right w-[25%] col-float-stack">
+<button class="w-full h-11 bg-[#0071E3] hover:bg-[#0077ED] text-white text-[14px] font-medium rounded-full transition-all cursor-pointer border-0" type="submit">
+              立即訂閱
+            </button>
+</div>
+</form>
+<div class="w-full text-center text-apple-secondary text-[12px] font-light">
+<i class="fa-solid fa-lock text-[11px] mr-1 text-[#0071E3]"></i>
+<span class="">我們重視您的隱私權，絕不透露您的個人資訊。隨時可取消訂閱。</span>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="w-full bg-apple-subtle border-t border-black/[0.06] pt-10 pb-16 text-[12px] leading-[1.33337] tracking-[-0.01em] text-apple-secondary">
+<div class="max-w-[1024px] mx-auto px-6">
+<!-- Disclaimers -->
+<div class="border-b border-black/[0.08] pb-6 mb-8 text-[11px] text-apple-secondary/90 space-y-2 font-light leading-relaxed">
+<p class="">1. 換購價值視乎你用以換購的合資格裝置狀況、年份及配置而定。並非所有裝置均合資格參與。必須年滿 18 歲方可參與換購計劃。</p>
+<p class="">2. 電池使用時間視乎使用情況及配置而異。詳情請瀏覽 aura-tech.com/batteries。</p>
+<p class="">3. 顯示器採用圓角設計，貼合優雅的機身弧度。若以標準矩形量度，對角線長度為 6.69 吋。實際可視區域較小。</p>
+</div>
+<!-- 5-Column Sitemap Navigation (Float left 20%) -->
+<div class="w-full clearfix pb-8">
+<div class="float-left w-1/5 pr-4 col-float-stack mb-6">
+<h3 class="text-[12px] text-apple-text font-semibold mb-2">探索選購</h3>
+<ul class="list-none p-0 m-0 space-y-1.5">
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">旗艦手機 Phone</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">超極致筆電 Mac</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">智慧穿戴 Watch</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">極致聲學 Audio</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">精選配件 Acc</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">禮品卡 Gift Card</a></li>
+</ul>
+</div>
+<div class="float-left w-1/5 pr-4 col-float-stack mb-6">
+<h3 class="text-[12px] text-apple-text font-semibold mb-2">帳戶與錢包</h3>
+<ul class="list-none p-0 m-0 space-y-1.5">
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">管理你的 Aura ID</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">訂單狀態查詢</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">Aura Cloud 雲端儲存</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">Aura Pay 感應支付</a></li>
+</ul>
+</div>
+<div class="float-left w-1/5 pr-4 col-float-stack mb-6">
+<h3 class="text-[12px] text-apple-text font-semibold mb-2">娛樂生態</h3>
+<ul class="list-none p-0 m-0 space-y-1.5">
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">Aura Music 無損音樂</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">Aura TV+ 原創串流</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">Aura Arcade 極速遊戲</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">Aura Podcasts 廣播</a></li>
+</ul>
+</div>
+<div class="float-left w-1/5 pr-4 col-float-stack mb-6">
+<h3 class="text-[12px] text-apple-text font-semibold mb-2">商務與教育</h3>
+<ul class="list-none p-0 m-0 space-y-1.5">
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">Aura 與企業採購</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">大專院校教育優惠</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">政府機構專屬採購</a></li>
+</ul>
+</div>
+<div class="float-left w-1/5 col-float-stack mb-6">
+<h3 class="text-[12px] text-apple-text font-semibold mb-2">關於 AURA</h3>
+<ul class="list-none p-0 m-0 space-y-1.5">
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">新聞中心 Newsroom</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">核心領導團隊</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">工作機會 Career</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">環境永續與責任</a></li>
+<li class=""><a class="text-apple-secondary hover:text-apple-text hover:underline transition-colors block" href="#">投資者關係</a></li>
+</ul>
+</div>
+</div>
+<!-- Copyright & Legal -->
+<div class="w-full pt-4 border-t border-black/[0.08] clearfix text-[11px] font-light">
+<div class="float-right text-right col-float-stack mb-2 sm:mb-0">
+<a class="text-apple-secondary hover:text-apple-text transition-colors" href="#">台灣 (繁體中文)</a>
+</div>
+<div class="float-left col-float-stack">
+<span class="mr-4">© 2025 AURA TECH Inc. 保留一切權利。</span>
+<a class="text-apple-secondary hover:text-apple-text hover:underline mr-3" href="#">隱私權政策</a>
+<a class="text-apple-secondary hover:text-apple-text hover:underline mr-3" href="#">使用條款</a>
+<a class="text-apple-secondary hover:text-apple-text hover:underline mr-3" href="#">銷售及退款政策</a>
+<a class="text-apple-secondary hover:text-apple-text hover:underline" href="#">法律聲明</a>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+
+</body></html>
